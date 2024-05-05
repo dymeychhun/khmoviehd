@@ -35,7 +35,7 @@
         <div id="main-wrapper">
             <!--Begin: Detail-->
             <div class="detail_page detail_page-style">
-                <div class="cover_follow" style="background-image: url(images/cc59d16122245417fa2faf135f838bca.jpg);">
+                <div class="cover_follow">
                 </div>
                 <div class="container">
                     <div class="prebreadcrumb">
@@ -47,7 +47,7 @@
                                     <a href="/movie" title="Movie">Movies</a>
 
                                 </li>
-                                <li class="breadcrumb-item active" aria-current="page">6 Hours Away</li>
+                                <li class="breadcrumb-item title active" aria-current="page"></li>
                             </ol>
                         </nav>
                     </div>
@@ -57,8 +57,7 @@
                         <div class="dp-w-cover">
 
 
-                            <a href="/watch-movie/watch-6-hours-away-free-108439" class="dp-w-c-play"><i
-                                    class="fa fa-play"></i></a>
+                            <a class="dp-w-c-play watch-movie"><i class="fa fa-play"></i></a>
 
 
                         </div>
@@ -66,8 +65,7 @@
                             <div class="dp-i-content">
                                 <div class="dp-i-c-poster">
                                     <div class="film-poster mb-2">
-                                        <img class="film-poster-img" src="images/7192237c81db41a3d14b7020d0c3cada.jpg"
-                                            title="6 Hours Away" alt="6 Hours Away">
+                                        <img class="film-poster-img poster" title="6 Hours Away" alt="6 Hours Away">
                                     </div>
                                     <div class="block-rating" id="block-rating"></div>
                                 </div>
@@ -75,15 +73,15 @@
                                     <div class="dp-i-c-stick">
 
 
-                                        <a href="/watch-movie/watch-6-hours-away-free-108439" title="Watch now"
-                                            class="btn btn-radius btn-focus"><i class="fa fa-play mr-2"></i>Watch
+                                        <a title="Watch now" class="btn btn-radius btn-focus watch-movie"><i
+                                                class="fa fa-play mr-2"></i>Watch
                                             now</a>
 
 
 
                                         <div id="favorite-state" class="float-right"></div>
                                     </div>
-                                    <h2 class="heading-name"><a href="/movie/6-hours-away-108439">6 Hours Away</a>
+                                    <h2 class="heading-name"><a id="title"></a>
                                     </h2>
                                     <div class="dp-i-stats">
                                         <span class="item mr-1">
@@ -94,28 +92,24 @@
                                         <span class="item mr-1"><button
                                                 class="btn btn-sm btn-quality"><strong>HD</strong></button></span>
                                         <span class="item mr-2"><button
-                                                class="btn btn-sm btn-radius btn-warning btn-imdb">IMDB:
-                                                4.9</button></span>
+                                                class="btn btn-sm btn-radius btn-warning btn-imdb"
+                                                id="vote-average">IMDB: </button>
+                                        </span>
                                     </div>
                                     <div class="description">
-                                        It follows ex-Marine Chris Montano after his wife goes missing during a
-                                        business trip. He then finds himself in a race against time to save her.
                                     </div>
                                     <div class="elements">
                                         <div class="row">
                                             <div class="col-xl-5 col-lg-6 col-md-8 col-sm-12">
                                                 <div class="row-line">
-                                                    <span class="type"><strong>Released: </strong></span> 2024-04-19
+                                                    <span class="type" id="release-date"><strong>Released:
+                                                        </strong></span>
                                                 </div>
-                                                <div class="row-line">
+                                                <div class="row-line" id="genre">
                                                     <span class="type"><strong>Genre: </strong></span>
 
-                                                    <a href="/genre/action" title="Action">Action</a>,
-
-                                                    <a href="/genre/thriller" title="Thriller">Thriller</a>
-
                                                 </div>
-                                                <div class="row-line">
+                                                <!-- <div class="row-line">
                                                     <span class="type"><strong>Casts: </strong></span>
 
                                                     <a href="/cast/lara-wolf" title="Lara Wolf">Lara Wolf</a>,
@@ -130,25 +124,24 @@
 
                                                     <a href="/cast/zair-montes" title="Zair Montes">Zair Montes</a>
 
-                                                </div>
+                                                </div> -->
                                             </div>
                                             <div class="col-xl-6 col-lg-6 col-md-4 col-sm-12">
                                                 <div class="row-line">
-                                                    <span class="type"><strong>Duration: </strong></span> 92
-                                                    min
+                                                    <span class="type" id="runtime"><strong>Duration: </strong></span>
                                                 </div>
                                                 <div class="row-line">
                                                     <span class="type"><strong>Country: </strong></span>
 
-                                                    <a href="/country/mx" title="Mexico">Mexico</a>
+                                                    <a id="country"></a>
 
                                                 </div>
-                                                <div class="row-line">
+                                                <!-- <div class="row-line">
                                                     <span class="type"><strong>Production: </strong></span>
 
                                                     <a href="/production/rog-films" title="Rog Films">Rog Films</a>
 
-                                                </div>
+                                                </div> -->
                                             </div>
                                             <div class="clearfix"></div>
                                         </div>
@@ -249,8 +242,7 @@
                         <span aria-hidden="true">×</span>
                     </button>
                     <div class="iframe16x9">
-                        <iframe width="560" height="315" id="iframe-trailer"
-                            data-src="https://www.youtube.com/embed/Z9rcVX8GZww" frameborder="0"
+                        <iframe width="560" height="315" id="iframe-trailer" frameborder="0"
                             allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
                     </div>
                 </div>
@@ -264,6 +256,7 @@
 var currPage = 'detail';
 </script>
 <script type="text/javascript" src="js/app.min.js"></script>
+<script type="text/javascript" src="js/detail-movie.js"></script>
 
 <script>
 $(document).ready(function() {

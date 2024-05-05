@@ -32,6 +32,7 @@
         content="Watch and Download Lastest Movies and Tv Shows Online in HD on Solarmovie Official website">
     <!--Begin: Stylesheet-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jwplayer-skin-netflix.css">
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="css/style.min.css">
     <!--End: Stylesheet-->
