@@ -24,7 +24,7 @@ $(function () {
       url: location.origin + "/admin/insert-movie.php",
       data: formData,
       success: function (response) {
-        console.log(response);
+        // console.log(response);
         if (response.status === "success") {
           // $("#movieForm")[0].reset();
           $("#poster-frame").html("");

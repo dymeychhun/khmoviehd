@@ -13,7 +13,8 @@ $(function () {
         location.replace(location.origin);
         return;
       }
-      console.log(response);
+      // console.log(response);
+
       $(".cover_follow").css(
         "background-image",
         "url(https://image.tmdb.org/t/p/original" +

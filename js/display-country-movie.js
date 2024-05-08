@@ -1,15 +1,21 @@
 $(function () {
-  const displayMovie = () => {
+  let countryISO = location.search.split("=")[1];
+  let offset = 0;
+  let limit = 8;
+
+  const getCountryMovie = (countryISO, offset, limit) => {
+    let data = {
+      country_iso: countryISO,
+      offset: offset,
+      limit: limit,
+      submit: true,
+    };
     $.ajax({
-      type: "GET",
-      url: location.origin + "/display-movie.php",
-      dataType: "json",
+      type: "POST",
+      url: location.origin + "/display-country-movie.php",
+      data: data,
       success: function (response) {
         // console.log(response);
-
-        if (response.meta.code == 404) {
-          return;
-        }
 
         $.each(response.data, function (_, value) {
           let html = `<div class="flw-item">
@@ -40,14 +46,21 @@ $(function () {
           <div class="clearfix"></div>
           </div>`;
 
-          $("#trending").append(html);
-          $("#latest").append(html);
+          $("#displayCountryMovie").append(html);
         });
-        $("#trending").append('<div class="clearfix"></div>');
-        $("#latest").append('<div class="clearfix"></div>');
+        $("#displayCountryMovie").append('<div class="clearfix"></div>');
+
+        if (response.data.length == 0) {
+          $("#loadMore").text("No more found").prop("disabled", true);
+        }
       },
     });
   };
 
-  displayMovie();
+  getCountryMovie(countryISO, offset, limit);
+
+  $("#loadMore").on("click", function () {
+    offset += limit;
+    getCountryMovie(countryISO, offset, limit);
+  });
 });

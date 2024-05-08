@@ -185,41 +185,7 @@
                             <div class="clearfix"></div>
                         </div>
                         <div class="block_area-content block_area-list film_list film_list-grid">
-                            <div class="film_list-wrap">
-
-                                <div class="flw-item">
-                                    <div class="film-poster">
-
-                                        <div class="pick film-poster-quality">HD</div>
-
-                                        <img data-src="https://img.solarmovie.pe/xxrz/250x400/338/cf/73/cf739ca76d63a2a907f4837a85d71357/cf739ca76d63a2a907f4837a85d71357.jpg"
-                                            class="film-poster-img lazyload" title="Knox Goes Away"
-                                            alt="Knox Goes Away">
-                                        <a href="/movie/watch-knox-goes-away-free-107796"
-                                            class="film-poster-ahref flw-item-tip" title="Knox Goes Away"><i
-                                                class="fa fa-play"></i></a>
-                                    </div>
-                                    <div class="film-detail film-detail-fix">
-
-                                        <h3 class="film-name"><a href="/movie/watch-knox-goes-away-free-107796"
-                                                title="Knox Goes Away">Knox Goes Away</a>
-                                        </h3>
-
-                                        <div class="fd-infor">
-
-
-                                            <span class="fdi-item">2024</span>
-                                            <span class="dot"></span>
-                                            <span class="fdi-item fdi-duration">114m</span>
-
-
-                                            <span class="float-right fdi-type">Movie</span>
-                                        </div>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
-
-                                <div class="clearfix"></div>
+                            <div class="film_list-wrap" id="mayLikeMovie">
                             </div>
                         </div>
                     </section>
@@ -257,23 +223,6 @@ var currPage = 'detail';
 </script>
 <script type="text/javascript" src="js/app.min.js"></script>
 <script type="text/javascript" src="js/detail-movie.js"></script>
-
-<script>
-$(document).ready(function() {
-    check_favorite();
-    // get_episodes();
-    vote_info();
-    if (movie.type == 2) {
-        $.get("/ajax/season/list/" + movie.id, function(res) {
-            $('#content-episodes').html(res);
-        });
-    } else {
-        $.get("/ajax/episode/list/" + movie.id, function(res) {
-            $('#content-episodes').html(res);
-        });
-    }
-});
-</script>
 
 </body>
 

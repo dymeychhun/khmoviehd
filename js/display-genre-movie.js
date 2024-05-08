@@ -1,15 +1,21 @@
 $(function () {
-  const displayMovie = () => {
+  let genreID = location.search.split("=")[1];
+  let start = 0;
+  let limit = 8;
+
+  const getGenreMovie = (genreID, start, limit) => {
+    let data = {
+      genre_id: genreID,
+      start: start,
+      limit: limit,
+      submit: true,
+    };
     $.ajax({
-      type: "GET",
-      url: location.origin + "/display-movie.php",
-      dataType: "json",
+      type: "POST",
+      url: location.origin + "/display-genre-movie.php",
+      data: data,
       success: function (response) {
         // console.log(response);
-
-        if (response.meta.code == 404) {
-          return;
-        }
 
         $.each(response.data, function (_, value) {
           let html = `<div class="flw-item">
@@ -40,14 +46,21 @@ $(function () {
           <div class="clearfix"></div>
           </div>`;
 
-          $("#trending").append(html);
-          $("#latest").append(html);
+          $("#displayGenreMovie").append(html);
         });
-        $("#trending").append('<div class="clearfix"></div>');
-        $("#latest").append('<div class="clearfix"></div>');
+        $("#displayGenreMovie").append('<div class="clearfix"></div>');
+
+        if (response.data.length == 0) {
+          $("#loadMore").text("No more found").prop("disabled", true);
+        }
       },
     });
   };
 
-  displayMovie();
+  getGenreMovie(genreID, start, limit);
+
+  $("#loadMore").on("click", function () {
+    start += limit;
+    getGenreMovie(genreID, start, limit);
+  });
 });

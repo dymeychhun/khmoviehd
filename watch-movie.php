@@ -21,8 +21,7 @@
                         <div class="search-content">
                             <form @submit="search">
                                 <div class="search-icon"><i class="fa fa-search"></i></div>
-                                <input v-model="keyword" type="text" class="form-control search-input"
-                                    autocomplete="off" name="keyword" placeholder="Enter keywords...">
+                                <input v-model="keyword" type="text" class="form-control search-input" autocomplete="off" name="keyword" placeholder="Enter keywords...">
                             </form>
                             <div class="nav search-result-pop search-suggest"></div>
                         </div>
@@ -50,16 +49,14 @@
                                 <li class="breadcrumb-item">
                                     <a href="/movie" title="Movie">Movie</a>
                                 </li>
-                                <li class="breadcrumb-item active" aria-current="page">Just Animals</li>
+                                <li class="breadcrumb-item active active-title" aria-current="page"></li>
 
                             </ol>
                         </nav>
                     </div>
 
-                    <div class="alert mb-3"
-                        style="background: #ffaa00; color: #111; font-size: 16px; font-weight: 600;">If you get any
-                        error message when trying to stream, please Refresh the page or switch to another streaming
-                        server.</div>
+                    <div class="alert mb-3" style="background: #ffaa00; color: #111; font-size: 16px; font-weight: 600;">If you get any
+                        error message when trying to stream, please Refresh the page.</div>
 
                     <div class="watching_player">
                         <div class="watching_player-area">
@@ -70,7 +67,6 @@
                                         <div class="span2"></div>
                                         <div class="span3"></div>
                                     </div>
-                                    <div id="watch-player"></div>
                                 </div>
                             </div>
                         </div>
@@ -80,8 +76,7 @@
                                     class="btn btn-sm btn-radius btn-secondary mr-2" onclick="add_favorite()"><i
                                         class="fa fa-plus mr-2"></i>Add to favorite
                                 </a> -->
-                        <a href="javascript:void(0)" id="turn-off-light"
-                            class="btn btn-sm btn-radius btn-secondary mr-2"><i class="fa fa-lightbulb mr-2"></i>
+                        <a href="javascript:void(0)" id="turn-off-light" class="btn btn-sm btn-radius btn-secondary mr-2"><i class="fa fa-lightbulb mr-2"></i>
                         </a>
                         <!-- <a id="pc-comment" href="javascript:void(0)"
                                     class="goto-comments btn btn-sm btn-radius btn-secondary mr-2"><i
@@ -97,14 +92,7 @@
         <div class="detail_page watch_page">
             <div class="container">
                 <!--Begin: Watch-->
-                <div class="detail_page-watch" data-watch_id="10428505" data-server="" data-season="" data-episode=""
-                    data-id="108463" data-type="1">
-                    <div class="film_tools">
-                        <div id="alert-fav" class="alert alert-success fade in alert-dismissible show"
-                            style="display: none;margin: 10px;">
-                            <strong>Success!</strong> <span id="fav-message"></span>
-                        </div>
-                    </div>
+                <div class="detail_page-watch" data-watch_id="10428505" data-server="" data-season="" data-episode="" data-id="108463" data-type="1">
                     <!-- <div class="sharethis-inline-share-buttons"
                                 data-url="https://solarmovie.pe/watch-movie/watch-just-animals-free-108463.10428505"
                                 style="padding-top: 20px; padding-bottom: 20px; text-align: center;">
@@ -126,7 +114,7 @@
                         <div class="dp-i-content">
                             <div class="dp-i-c-poster">
                                 <div class="film-poster mb-2">
-                                    <img class="film-poster-img poster" title="Just Animals" alt="Just Animals">
+                                    <img class="film-poster-img poster" title="" alt="">
                                 </div>
                                 <div class="block-rating" id="block-rating"></div>
                             </div>
@@ -135,14 +123,10 @@
                                 </h2>
                                 <div class="dp-i-stats">
                                     <span class="item mr-1">
-                                        <button data-toggle="modal" data-target="#modaltrailer" title="Trailer"
-                                            class="btn btn-sm btn-trailer"><i
-                                                class="fas fa-video mr-2"></i>Trailer</button>
+                                        <button data-toggle="modal" data-target="#modaltrailer" title="Trailer" class="btn btn-sm btn-trailer"><i class="fas fa-video mr-2"></i>Trailer</button>
                                     </span>
-                                    <span class="item mr-1"><button
-                                            class="btn btn-sm btn-quality"><strong>HD</strong></button></span>
-                                    <span class="item mr-2"><button class="btn btn-sm btn-radius btn-warning btn-imdb"
-                                            id="vote-average">IMDB:
+                                    <span class="item mr-1"><button class="btn btn-sm btn-quality"><strong>HD</strong></button></span>
+                                    <span class="item mr-2"><button class="btn btn-sm btn-radius btn-warning btn-imdb" id="vote-average">IMDB:
                                         </button></span>
                                 </div>
                                 <div class="description">
@@ -222,41 +206,7 @@
                         <div class="clearfix"></div>
                     </div>
                     <div class="block_area-content block_area-list film_list film_list-grid">
-                        <div class="film_list-wrap">
-
-                            <div class="flw-item">
-                                <div class="film-poster">
-
-                                    <div class="pick film-poster-quality">HD</div>
-
-                                    <img data-src="https://img.solarmovie.pe/xxrz/250x400/338/b5/f2/b5f25392b3a74cca34bd00363112921b/b5f25392b3a74cca34bd00363112921b.jpg"
-                                        class="film-poster-img lazyload" title="Alex Edelman: Just for Us"
-                                        alt="Alex Edelman: Just for Us">
-                                    <a href="/movie/watch-alex-edelman-just-for-us-free-107881"
-                                        class="film-poster-ahref flw-item-tip" title="Alex Edelman: Just for Us"><i
-                                            class="fa fa-play"></i></a>
-                                </div>
-                                <div class="film-detail film-detail-fix">
-
-                                    <h3 class="film-name"><a href="/movie/watch-alex-edelman-just-for-us-free-107881"
-                                            title="Alex Edelman: Just for Us">Alex Edelman: Just for Us</a>
-                                    </h3>
-
-                                    <div class="fd-infor">
-
-
-                                        <span class="fdi-item">2024</span>
-                                        <span class="dot"></span>
-                                        <span class="fdi-item fdi-duration">91m</span>
-
-
-                                        <span class="float-right fdi-type">Movie</span>
-                                    </div>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-
-                            <div class="clearfix"></div>
+                        <div class="film_list-wrap" id="mayLikeMovie">
                         </div>
                     </div>
                 </section>
@@ -269,9 +219,7 @@
                         <div class="clearfix"></div>
                     </div>
                     <div class="comments-content">
-                        <div class="fb-comments"
-                            data-href="https://solarmovie.pe/watch-movie/watch-just-animals-free-108463.10428505"
-                            data-width="100%" data-numposts="10"></div>
+                        <div class="fb-comments" data-href="https://solarmovie.pe/watch-movie/watch-just-animals-free-108463.10428505" data-width="100%" data-numposts="10"></div>
                     </div>
                 </section>
             </div>
@@ -283,8 +231,7 @@
 
 </div>
 <!--Begin: Modal-->
-<div class="modal fade premodal premodal-trailer" id="modaltrailer" tabindex="-1" role="dialog"
-    aria-labelledby="modaltrailertitle" aria-hidden="true">
+<div class="modal fade premodal premodal-trailer" id="modaltrailer" tabindex="-1" role="dialog" aria-labelledby="modaltrailertitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-body">
@@ -292,8 +239,7 @@
                     <span aria-hidden="true">×</span>
                 </button>
                 <div class="iframe16x9">
-                    <iframe width="560" height="315" id="iframe-trailer" frameborder="0"
-                        allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+                    <iframe width="560" height="315" id="iframe-trailer" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
                 </div>
             </div>
         </div>
@@ -327,7 +273,7 @@
 </div>
 <?php require_once 'components/script.php'; ?>
 <script>
-var currPage = 'watch';
+    var currPage = 'watch';
 </script>
 <script type="text/javascript" src="js/app.min.js"></script>
 <script src="https://content.jwplatform.com/libraries/KB5zFt7A.js"></script>

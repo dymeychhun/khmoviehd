@@ -1,15 +1,11 @@
 $(function () {
-  const displayMovie = () => {
+  const getMayLikeMovie = () => {
     $.ajax({
       type: "GET",
-      url: location.origin + "/display-movie.php",
+      url: location.origin + "/may-like-movie.php",
       dataType: "json",
       success: function (response) {
         // console.log(response);
-
-        if (response.meta.code == 404) {
-          return;
-        }
 
         $.each(response.data, function (_, value) {
           let html = `<div class="flw-item">
@@ -40,14 +36,12 @@ $(function () {
           <div class="clearfix"></div>
           </div>`;
 
-          $("#trending").append(html);
-          $("#latest").append(html);
+          $("#mayLikeMovie").append(html);
         });
-        $("#trending").append('<div class="clearfix"></div>');
-        $("#latest").append('<div class="clearfix"></div>');
+        $("#mayLikeMovie").append('<div class="clearfix"></div>');
       },
     });
   };
 
-  displayMovie();
+  getMayLikeMovie();
 });

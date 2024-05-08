@@ -1,7 +1,9 @@
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/popper.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/lazysizes.min.js" async=""></script>
+<script type="text/javascript" src="js/lazysizes.min.js"></script>
+<script type="text/javascript" src="js/category-menu.js"></script>
+<script type="text/javascript" src="js/may-like-movie.js"></script>
 <!-- <script src="js/js.cookie.min.js"></script> -->
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 

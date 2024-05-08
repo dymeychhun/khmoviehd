@@ -2,7 +2,7 @@
 require_once 'config/db_config.php';
 require_once 'config/db_connection.php';
 
-$sqlSelectMovie = "SELECT * FROM movies";
+$sqlSelectMovie = "SELECT * FROM movies ORDER BY RAND() LIMIT 16";
 $querySelectMovie = $conn->query($sqlSelectMovie);
 
 header('Content-Type: application/json');

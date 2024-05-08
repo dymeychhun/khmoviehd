@@ -13,22 +13,32 @@ if ($querySelectMovie->num_rows == 0) {
 }
 
 $genre = [];
+$country = [];
 while ($queryResult = $querySelectMovie->fetch_assoc()) {
     $genereArray = explode(",", $queryResult['genre_id']);
     $genre = array_merge($genre, $genereArray);
+    $country[] = $queryResult['country_iso_3166_1'];
 }
 $genre = array_unique($genre);
+$country = array_unique($country);
 
-$newArray = [];
+$newGenre = [];
 foreach ($genre as $i => $val) {
     $sqlSelectGenre = "SELECT * FROM genres WHERE id=" . $val;
     $querySelectGenre = $conn->query($sqlSelectGenre);
     $querySelectGenreResult = $querySelectGenre->fetch_assoc();
-    $rowGenreSlug = $querySelectGenreResult['slug'];
-    $newArray[$val] = $rowGenreSlug;
-    // $genre[$i] = $val;
+    $rowGenreSlug = $querySelectGenreResult['name'];
+    $newGenre[$val] = $rowGenreSlug;
 }
-print_r($newArray);
-exit;
-echo json_encode(['status' => 'success', 'genre_id' => $genre]);
+
+$newCountry = [];
+foreach ($country as $i => $val) {
+    $sqlSelectCountry = "SELECT * FROM countries WHERE iso_3166_1='$val'";
+    $querySelectCountry = $conn->query($sqlSelectCountry);
+    $querySelectCountryResult = $querySelectCountry->fetch_assoc();
+    $rowCountryName = $querySelectCountryResult['english_name'];
+    $newCountry[$val] = $rowCountryName;
+}
+
+echo json_encode(['status' => 'success', 'genre' => $newGenre, 'country' => $newCountry]);
 $conn->close();

@@ -19,7 +19,8 @@
                         <div class="search-content">
                             <form @submit="search">
                                 <div class="search-icon"><i class="fa fa-search"></i></div>
-                                <input v-model="keyword" type="text" class="form-control search-input" autocomplete="off" name="keyword" placeholder="Enter keywords...">
+                                <input v-model="keyword" type="text" class="form-control search-input"
+                                    autocomplete="off" name="keyword" placeholder="Enter keywords...">
                             </form>
                             <div class="nav search-result-pop search-suggest"></div>
                         </div>
@@ -37,8 +38,10 @@
                         <div class="search-content">
                             <form @submit="search">
                                 <div class="search-icon"><i class="fa fa-search"></i></div>
-                                <input v-model="keyword" type="text" class="form-control search-input" name="keyword" placeholder="Enter keywords..." autocomplete="off">
-                                <button class="btn btn-primary btn-primary-submit"><i class="fas fa-arrow-right"></i></button>
+                                <input v-model="keyword" type="text" class="form-control search-input" name="keyword"
+                                    placeholder="Enter keywords..." autocomplete="off">
+                                <button class="btn btn-primary btn-primary-submit"><i
+                                        class="fas fa-arrow-right"></i></button>
                             </form>
                             <div class="nav search-result-pop search-suggest"></div>
                         </div>
@@ -88,7 +91,7 @@
 <!--script-->
 <?php require_once 'components/script.php'; ?>
 <script>
-    var currPage = 'home';
+var currPage = 'home';
 </script>
 <script type="text/javascript" src="js/app.min.js"></script>
 <script type="text/javascript" src="js/display-movie.js"></script>
