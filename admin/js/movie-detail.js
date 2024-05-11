@@ -27,7 +27,7 @@ $.ajax({
   dataType: "json",
   ...options,
   success: function (response, status, xhr) {
-    console.log(response);
+    // console.log(response);
 
     if (status != "success") {
       console.log(xhr);

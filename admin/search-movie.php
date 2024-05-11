@@ -1,9 +1,9 @@
-<?php require_once 'components/head.php'; ?>
+<?php require_once 'include/head.php'; ?>
 <!-- Page Wrapper -->
 <div id="wrapper">
 
     <!-- Sidebar -->
-    <?php require_once 'components/sidebar.php'; ?>
+    <?php require_once 'include/sidebar.php'; ?>
     <!-- End of Sidebar -->
 
     <!-- Content Wrapper -->
@@ -13,7 +13,7 @@
         <div id="content">
 
             <!-- Topbar -->
-            <?php require_once 'components/topbar.php'; ?>
+            <?php require_once 'include/topbar.php'; ?>
             <!-- End of Topbar -->
 
             <!-- Begin Page Content -->
@@ -32,7 +32,7 @@
         <!-- End of Main Content -->
 
         <!-- Footer -->
-        <?php require_once 'components/footer.php'; ?>
+        <?php require_once 'include/footer.php'; ?>
         <!-- End of Footer -->
 
     </div>
@@ -47,9 +47,9 @@
 </a>
 
 <!-- Logout Modal-->
-<?php require_once 'components/logout-modal.php'; ?>
+<?php require_once 'include/logout-modal.php'; ?>
 
-<?php require_once 'components/script.php'; ?>
+<?php require_once 'include/script.php'; ?>
 <script src="js/search-movie.js"></script>
 
 </body>

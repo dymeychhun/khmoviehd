@@ -1,9 +1,15 @@
 $(function () {
   let title = location.search.split("=")[1];
+
+  if (!title) {
+    location.replace(location.origin);
+    return;
+  }
+
   let data = {
     title: title,
   };
-  //   console.log(title);
+
   $.ajax({
     type: "POST",
     url: location.origin + "/detail-movie.php",

@@ -1,21 +1,30 @@
 $(function () {
-  let genreID = location.search.split("=")[1];
-  let start = 0;
-  let limit = 8;
+  let url = location.search.split("=")[1];
 
-  const getGenreMovie = (genreID, start, limit) => {
-    let data = {
-      genre_id: genreID,
-      start: start,
-      limit: limit,
-      submit: true,
-    };
+  if (!url) {
+    location.replace(location.origin + "/404");
+    return;
+  }
+
+  let keyword = url.toLowerCase().replace(/\W+/g, "-");
+  let searchResultText = url.toLowerCase().replace(/\+/g, " ");
+  $(".cat-heading").append('"' + searchResultText + '"');
+
+  let data = {
+    keyword: keyword,
+  };
+  const getsearchMovie = () => {
     $.ajax({
       type: "POST",
-      url: location.origin + "/display-genre-movie.php",
       data: data,
+      url: location.origin + "/search-movie.php",
+      dataType: "json",
       success: function (response) {
-        // console.log(response);
+        if (response.meta.code == 404) {
+          console.log(response);
+          return;
+        }
+
         $.each(response.data, function (_, value) {
           let html = `<div class="flw-item">
           <div class="film-poster">
@@ -45,21 +54,12 @@ $(function () {
           <div class="clearfix"></div>
           </div>`;
 
-          $("#displayGenreMovie").append(html);
+          $("#displaySearchMovie").append(html);
         });
-        $("#displayGenreMovie").append('<div class="clearfix"></div>');
-
-        if (response.data.length == 0) {
-          $("#loadMore").text("No more found").prop("disabled", true);
-        }
+        $("#displaySearchMovie").append('<div class="clearfix"></div>');
       },
     });
   };
 
-  getGenreMovie(genreID, start, limit);
-
-  $("#loadMore").on("click", function () {
-    start += limit;
-    getGenreMovie(genreID, start, limit);
-  });
+  getsearchMovie();
 });

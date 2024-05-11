@@ -1,8 +1,8 @@
-<?php require_once 'components/head.php'; ?>
+<?php require_once 'include/head.php'; ?>
 <div id="app">
     <div id="sidebar_menu_bg"></div>
     <!--sidebar menu-->
-    <?php require_once 'components/sidebar-menu.php'; ?>
+    <?php require_once 'include/sidebar-menu.php'; ?>
     <div id="wrapper">
         <div id="header">
             <div class="container">
@@ -11,16 +11,12 @@
 
                 </a>
                 <!--Begin: Menu-->
-                <?php require_once 'components/header-menu.php'; ?>
+                <?php require_once 'include/header-menu.php'; ?>
                 <!--End: Menu-->
                 <div id="header_right">
                     <div id="search">
                         <div class="search-content">
-                            <form @submit="search">
-                                <div class="search-icon"><i class="fa fa-search"></i></div>
-                                <input v-model="keyword" type="text" class="form-control search-input" autocomplete="off" name="keyword" placeholder="Enter keywords...">
-                            </form>
-                            <div class="nav search-result-pop search-suggest"></div>
+                            <?php include 'include/search-form.php'; ?>
                         </div>
                     </div>
                     <div id="user-slot"></div>
@@ -37,7 +33,7 @@
                 <section class="block_area block_area_category">
                     <div class="block_area-header">
                         <div class="float-left bah-heading mr-4">
-                            <h2 class="cat-heading">Search results for ""
+                            <h2 class="cat-heading">Search results for
                             </h2>
                         </div>
                         <!-- <div class="float-right bah-filter">
@@ -66,7 +62,7 @@
                         </nav>
                     </div> -->
                     <div class="block_area-content block_area-list film_list film_list-grid">
-                        <div class="film_list-wrap some-list-1" id="displayGenreMovie">
+                        <div class="film_list-wrap some-list-1" id="displaySearchMovie">
 
                         </div>
                     </div>
@@ -79,18 +75,18 @@
         </div>
         <!--End: Main-->
 
-        <?php require_once 'components/footer.php'; ?>
+        <?php require_once 'include/footer.php'; ?>
 
     </div>
 
 </div>
-<?php require_once 'components/script.php'; ?>
+<?php require_once 'include/script.php'; ?>
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script>
     var currPage = '';
 </script>
 <script type="text/javascript" src="js/app.min.js"></script>
-
+<script type="text/javascript" src="js/search-movie.js"></script>
 </body>
 
 </html>

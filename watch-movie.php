@@ -1,10 +1,10 @@
-<?php require_once 'components/head.php'; ?>
+<?php require_once 'include/head.php'; ?>
 <div id="fb-root"></div>
 <script async="" defer="" crossorigin="anonymous" src="js/sdk.js#xfbml=1&amp;version=v4.0"></script>
 
 <div id="app">
     <div id="sidebar_menu_bg"></div>
-    <?php require_once 'components/sidebar-menu.php'; ?>
+    <?php require_once 'include/sidebar-menu.php'; ?>
 
     <div id="wrapper">
         <div id="header">
@@ -14,16 +14,12 @@
 
                 </a>
                 <!--Begin: Menu-->
-                <?php require_once 'components/header-menu.php'; ?>
+                <?php require_once 'include/header-menu.php'; ?>
                 <!--End: Menu-->
                 <div id="header_right">
                     <div id="search">
                         <div class="search-content">
-                            <form @submit="search">
-                                <div class="search-icon"><i class="fa fa-search"></i></div>
-                                <input v-model="keyword" type="text" class="form-control search-input" autocomplete="off" name="keyword" placeholder="Enter keywords...">
-                            </form>
-                            <div class="nav search-result-pop search-suggest"></div>
+                            <?php include 'include/search-form.php'; ?>
                         </div>
                     </div>
                     <div id="user-slot"></div>
@@ -227,7 +223,7 @@
         <!--End: Related-->
     </div>
     <!--End: Main-->
-    <?php require_once 'components/footer.php'; ?>
+    <?php require_once 'include/footer.php'; ?>
 
 </div>
 <!--Begin: Modal-->
@@ -271,7 +267,7 @@
 <!--End: Modal-->
 <div id="mask-overlay"></div>
 </div>
-<?php require_once 'components/script.php'; ?>
+<?php require_once 'include/script.php'; ?>
 <script>
     var currPage = 'watch';
 </script>

@@ -1,10 +1,10 @@
 <?php require_once 'config/db_connection.php'; ?>
-<?php require_once 'components/head.php'; ?>
+<?php require_once 'include/head.php'; ?>
 <!-- Page Wrapper -->
 <div id="wrapper">
 
     <!-- Sidebar -->
-    <?php require_once 'components/sidebar.php'; ?>
+    <?php require_once 'include/sidebar.php'; ?>
     <!-- End of Sidebar -->
 
     <!-- Content Wrapper -->
@@ -14,7 +14,7 @@
         <div id="content">
 
             <!-- Topbar -->
-            <?php require_once 'components/topbar.php'; ?>
+            <?php require_once 'include/topbar.php'; ?>
             <!-- End of Topbar -->
 
             <!-- Begin Page Content -->
@@ -58,8 +58,7 @@
                                     <div class="col-md-3">
                                         <div class="form-group">
                                             <label for="overview">Overview</label>
-                                            <textarea class="form-control" id="overview" rows="3"
-                                                autocomplete="off"></textarea>
+                                            <textarea class="form-control" id="overview" rows="3" autocomplete="off"></textarea>
                                         </div>
                                     </div>
                                     <div class="col-md-3">
@@ -83,8 +82,7 @@
                                     <div class="col-md-3">
                                         <div class="form-group">
                                             <label for="release_date">Released Data</label>
-                                            <input type="text" class="form-control" id="release_date"
-                                                autocomplete="off">
+                                            <input type="text" class="form-control" id="release_date" autocomplete="off">
                                         </div>
                                     </div>
                                     <div class="col-md-3">
@@ -96,8 +94,7 @@
                                     <div class="col-md-3">
                                         <div class="form-group">
                                             <label for="vote_average">Vote</label>
-                                            <input type="text" class="form-control" id="vote_average"
-                                                autocomplete="off">
+                                            <input type="text" class="form-control" id="vote_average" autocomplete="off">
                                         </div>
                                     </div>
                                     <div class="col-md-3">
@@ -120,22 +117,19 @@
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <label for="video_path">Genre</label>
-                                            <textarea class="form-control" id="genre" rows="3"
-                                                autocomplete="off"></textarea>
+                                            <textarea class="form-control" id="genre" rows="3" autocomplete="off"></textarea>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <label for="video_path">Video Path</label>
-                                            <textarea class="form-control" id="video_path" rows="3"
-                                                autocomplete="off"></textarea>
+                                            <textarea class="form-control" id="video_path" rows="3" autocomplete="off"></textarea>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <label for="subtitle_path">Subtitle Path</label>
-                                            <textarea class="form-control" id="subtitle_path" rows="3"
-                                                autocomplete="off"></textarea>
+                                            <textarea class="form-control" id="subtitle_path" rows="3" autocomplete="off"></textarea>
                                         </div>
                                     </div>
                                     <div class="col-md-12 my-3">
@@ -155,7 +149,7 @@
         <!-- End of Main Content -->
 
         <!-- Footer -->
-        <?php require_once 'components/footer.php'; ?>
+        <?php require_once 'include/footer.php'; ?>
         <!-- End of Footer -->
 
     </div>
@@ -170,9 +164,9 @@
 </a>
 
 <!-- Logout Modal-->
-<?php require_once 'components/logout-modal.php'; ?>
+<?php require_once 'include/logout-modal.php'; ?>
 
-<?php require_once 'components/script.php'; ?>
+<?php require_once 'include/script.php'; ?>
 <script src="js/movie-detail.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="js/insert-movie.js"></script>

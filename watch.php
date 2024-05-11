@@ -1,7 +1,7 @@
-<?php require_once 'components/head.php'; ?>
+<?php require_once 'include/head.php'; ?>
 <div id="app">
     <div id="sidebar_menu_bg"></div>
-    <?php require_once 'components/sidebar-menu.php'; ?>
+    <?php require_once 'include/sidebar-menu.php'; ?>
 
     <div id="wrapper">
         <div id="header">
@@ -11,17 +11,12 @@
 
                 </a>
                 <!--Begin: Menu-->
-                <?php require_once 'components/header-menu.php'; ?>
+                <?php require_once 'include/header-menu.php'; ?>
                 <!--End: Menu-->
                 <div id="header_right">
                     <div id="search">
                         <div class="search-content">
-                            <form @submit="search">
-                                <div class="search-icon"><i class="fa fa-search"></i></div>
-                                <input v-model="keyword" type="text" class="form-control search-input"
-                                    autocomplete="off" name="keyword" placeholder="Enter keywords...">
-                            </form>
-                            <div class="nav search-result-pop search-suggest"></div>
+                            <?php include 'include/search-form.php'; ?>
                         </div>
                     </div>
                     <div id="user-slot"></div>
@@ -73,8 +68,7 @@
                                     <div class="dp-i-c-stick">
 
 
-                                        <a title="Watch now" class="btn btn-radius btn-focus watch-movie"><i
-                                                class="fa fa-play mr-2"></i>Watch
+                                        <a title="Watch now" class="btn btn-radius btn-focus watch-movie"><i class="fa fa-play mr-2"></i>Watch
                                             now</a>
 
 
@@ -85,15 +79,10 @@
                                     </h2>
                                     <div class="dp-i-stats">
                                         <span class="item mr-1">
-                                            <button data-toggle="modal" data-target="#modaltrailer" title="Trailer"
-                                                class="btn btn-sm btn-trailer"><i
-                                                    class="fas fa-video mr-2"></i>Trailer</button>
+                                            <button data-toggle="modal" data-target="#modaltrailer" title="Trailer" class="btn btn-sm btn-trailer"><i class="fas fa-video mr-2"></i>Trailer</button>
                                         </span>
-                                        <span class="item mr-1"><button
-                                                class="btn btn-sm btn-quality"><strong>HD</strong></button></span>
-                                        <span class="item mr-2"><button
-                                                class="btn btn-sm btn-radius btn-warning btn-imdb"
-                                                id="vote-average">IMDB: </button>
+                                        <span class="item mr-1"><button class="btn btn-sm btn-quality"><strong>HD</strong></button></span>
+                                        <span class="item mr-2"><button class="btn btn-sm btn-radius btn-warning btn-imdb" id="vote-average">IMDB: </button>
                                         </span>
                                     </div>
                                     <div class="description">
@@ -195,12 +184,11 @@
             <!--End: Related-->
         </div>
         <!--End: Main-->
-        <?php require_once 'components/footer.php'; ?>
+        <?php require_once 'include/footer.php'; ?>
 
     </div>
     <!--Begin: Modal-->
-    <div class="modal fade premodal premodal-trailer" id="modaltrailer" tabindex="-1" role="dialog"
-        aria-labelledby="modaltrailertitle" aria-hidden="true">
+    <div class="modal fade premodal premodal-trailer" id="modaltrailer" tabindex="-1" role="dialog" aria-labelledby="modaltrailertitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-body">
@@ -208,8 +196,7 @@
                         <span aria-hidden="true">×</span>
                     </button>
                     <div class="iframe16x9">
-                        <iframe width="560" height="315" id="iframe-trailer" frameborder="0"
-                            allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+                        <iframe width="560" height="315" id="iframe-trailer" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
                     </div>
                 </div>
             </div>
@@ -217,9 +204,9 @@
     </div>
     <!--End: Modal-->
 </div>
-<?php require_once 'components/script.php'; ?>
+<?php require_once 'include/script.php'; ?>
 <script>
-var currPage = 'detail';
+    var currPage = 'detail';
 </script>
 <script type="text/javascript" src="js/app.min.js"></script>
 <script type="text/javascript" src="js/detail-movie.js"></script>

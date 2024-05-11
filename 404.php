@@ -1,4 +1,4 @@
-<?php require_once 'components/head.php'; ?>
+<?php require_once 'include/head.php'; ?>
 <div id="app">
     <div id="wrapper">
         <div id="main-wrapper">
@@ -17,7 +17,7 @@
     </div>
 </div>
 <!--script-->
-<?php require_once 'components/script.php'; ?>
+<?php require_once 'include/script.php'; ?>
 <script>
     var currPage = 'home';
 </script>
