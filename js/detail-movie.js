@@ -29,7 +29,7 @@ $(function () {
       );
       $(".watch-movie").attr(
         "href",
-        "/watch-movie.php?title=" + response.data.title_slug
+        "/watch-movie?title=" + response.data.title_slug
       );
       $(".title").text(response.data.title);
       $(".poster").attr(
@@ -44,11 +44,7 @@ $(function () {
       let genreList = "";
       $.each(response.data.genre_id, function (_, value) {
         genreList +=
-          '<a href="/genre.php?genre=' +
-          value.id +
-          '">' +
-          value.name +
-          "</a>, ";
+          '<a href="/genre?genre=' + value.id + '">' + value.name + "</a>, ";
       });
       genreList = genreList.slice(0, -2);
       $("#genre").append(genreList);
@@ -56,7 +52,7 @@ $(function () {
         .text(response.data.english_name)
         .attr({
           title: response.data.english_name,
-          href: "/country.php?country=" + response.data.iso_3166_1,
+          href: "/country?country=" + response.data.iso_3166_1,
         });
 
       $("#iframe-trailer").attr(

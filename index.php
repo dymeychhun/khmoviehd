@@ -17,11 +17,7 @@
                 <div id="header_right">
                     <div id="search">
                         <div class="search-content">
-                            <form @submit="search">
-                                <div class="search-icon"><i class="fa fa-search"></i></div>
-                                <input v-model="keyword" type="text" class="form-control search-input" autocomplete="off" name="keyword" placeholder="Enter keywords...">
-                            </form>
-                            <div class="nav search-result-pop search-suggest"></div>
+                            <?php include 'include/search-form.php'; ?>
                         </div>
                     </div>
                     <div id="user-slot"></div>
@@ -31,16 +27,17 @@
                 <!--begin: header-home-add-->
                 <div class="header-home-add">
                     <div class="search-home-title">
-                        <h5 class="sht-heading">Find Movies, TV shows and more</h5>
+                        <h5 class="sht-heading">Find Movies</h5>
                     </div>
                     <div id="search-home">
                         <div class="search-content">
-                            <form action="search.php" method="GET" id="searchForm">
+                            <form action="search" method="GET" id="searchForm">
                                 <div class="search-icon"><i class="fa fa-search"></i></div>
-                                <input type="text" class="form-control search-input" name="keyword" placeholder="Enter keywords..." autocomplete="off" id="keyword">
-                                <button type="submit" class="btn btn-primary btn-primary-submit"><i class="fas fa-arrow-right"></i></button>
+                                <input type="text" class="form-control search-input" name="keyword"
+                                    placeholder="Enter keywords..." autocomplete="off" id="keyword" required>
+                                <button type="submit" class="btn btn-primary btn-primary-submit"><i
+                                        class="fas fa-arrow-right"></i></button>
                             </form>
-
                             <div class="nav search-result-pop search-suggest"></div>
                         </div>
                     </div>
@@ -89,7 +86,7 @@
 <!--script-->
 <?php require_once 'include/script.php'; ?>
 <script>
-    var currPage = 'home';
+var currPage = 'home';
 </script>
 <script type="text/javascript" src="js/app.min.js"></script>
 <script type="text/javascript" src="js/display-movie.js"></script>

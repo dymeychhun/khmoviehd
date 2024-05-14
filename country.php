@@ -33,7 +33,7 @@
                 <section class="block_area block_area_category">
                     <div class="block_area-header">
                         <div class="float-left bah-heading mr-4">
-                            <h2 class="cat-heading">Popular Movies</h2>
+                            <h2 class="cat-heading"></h2>
                         </div>
                         <!-- <div class="float-right bah-filter">
                             <a data-toggle="collapse" href="#cate-filter" role="button" aria-expanded="false"

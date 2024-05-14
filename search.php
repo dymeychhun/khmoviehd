@@ -67,7 +67,9 @@
                         </div>
                     </div>
                     <div class="mw-buttons text-center my-5">
-                        <button type="button" class="btn btn-lg btn-radius btn-primary" id="loadMore">Load More <i class="fas fa-arrow-circle-right ml-2"></i></button>
+                        <button type="button" class="btn btn-lg btn-radius btn-primary" id="loadMore">Load More
+                            <!-- <i class="fas fa-arrow-circle-right ml-2"></i> -->
+                        </button>
                     </div>
                 </section>
                 <!--End: Section film list-->

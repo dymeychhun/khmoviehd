@@ -17,9 +17,9 @@
         </li>
         <li class="nav-item"><a href="/movie" title="Movies">Movies</a>
         </li>
-        <li class="nav-item"><a href="/tv-show" title="TV Shows">TV Shows</a></li>
+        <!-- <li class="nav-item"><a href="/tv-show" title="TV Shows">TV Shows</a></li>
         <li class="nav-item"><a href="/top-imdb" title="Top IMDB">Top IMDB</a></li>
-        <li class="nav-item"><a href="/android-movies-apk" title="Android App">Android App</a></li>
+        <li class="nav-item"><a href="/android-movies-apk" title="Android App">Android App</a></li> -->
     </ul>
     <div class="clearfix"></div>
 </div>

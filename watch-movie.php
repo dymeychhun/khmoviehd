@@ -56,7 +56,7 @@
 
                     <div class="watching_player">
                         <div class="watching_player-area">
-                            <div id="mask-player" style="padding-bottom: 56.25%;">
+                            <div id="mask-player" style="padding-bottom: 56.25%; display: none;">
                                 <div class="loading-relative">
                                     <div class="loading">
                                         <div class="span1"></div>
@@ -65,21 +65,22 @@
                                     </div>
                                 </div>
                             </div>
+                            <div id="watch-player" data-jwplayer-id="watch-player" style="display: none;"></div>
+                            <div id="watch-iframe" style="padding-bottom: 56.25%;"></div>
                         </div>
-                    </div>
-                    <div class="watching_player-control">
-                        <!-- <a id="pc-fav" href="javascript:void(0)"
-                                    class="btn btn-sm btn-radius btn-secondary mr-2" onclick="add_favorite()"><i
-                                        class="fa fa-plus mr-2"></i>Add to favorite
-                                </a> -->
-                        <a href="javascript:void(0)" id="turn-off-light" class="btn btn-sm btn-radius btn-secondary mr-2"><i class="fa fa-lightbulb mr-2"></i>
-                        </a>
-                        <!-- <a id="pc-comment" href="javascript:void(0)"
-                                    class="goto-comments btn btn-sm btn-radius btn-secondary mr-2"><i
-                                        class="fa fa-comments mr-2"></i>Comments
-                                </a> -->
-
-                        <div class="clearfix"></div>
+                        <div class="watching_player-control">
+                            <!-- <a id="pc-fav" href="javascript:void(0)" onclick="add_favorite()"
+                                class="btn btn-sm btn-radius btn-secondary mr-2"><i class="fa fa-plus mr-2"></i>Add to
+                                favorite
+                            </a> -->
+                            <a href="javascript:void(0)" id="turn-off-light" class="btn btn-sm btn-radius btn-secondary mr-2"><i class="fa fa-lightbulb mr-2"></i>
+                            </a>
+                            <!-- <a id="pc-comment" href="javascript:void(0)"
+                                class="goto-comments btn btn-sm btn-radius btn-secondary mr-2"><i
+                                    class="fa fa-comments mr-2"></i>Comments
+                            </a> -->
+                            <div class="clearfix"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -88,7 +89,7 @@
         <div class="detail_page watch_page">
             <div class="container">
                 <!--Begin: Watch-->
-                <div class="detail_page-watch" data-watch_id="10428505" data-server="" data-season="" data-episode="" data-id="108463" data-type="1">
+                <div class="detail_page-watch" data-watch_id="">
                     <!-- <div class="sharethis-inline-share-buttons"
                                 data-url="https://solarmovie.pe/watch-movie/watch-just-animals-free-108463.10428505"
                                 style="padding-top: 20px; padding-bottom: 20px; text-align: center;">
@@ -102,7 +103,7 @@
                                     </div>
                                 </div>
                             </div> -->
-                    <div id="vs-vid"></div>
+                    <!-- <div id="vs-vid"></div> -->
                     <!-- <div style="text-align:center;margin-bottom: 20px;margin-top:20px;display:none;"
                                 id="hgiks-middle"></div> -->
                     <div class="detail_page-infor">
@@ -112,7 +113,7 @@
                                 <div class="film-poster mb-2">
                                     <img class="film-poster-img poster" title="" alt="">
                                 </div>
-                                <div class="block-rating" id="block-rating"></div>
+                                <!-- <div class="block-rating" id="block-rating"></div> -->
                             </div>
                             <div class="dp-i-c-right">
                                 <h2 class="heading-name"><a id="title"></a>

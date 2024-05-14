@@ -2,7 +2,23 @@
 require_once 'config/db_config.php';
 require_once 'config/db_connection.php';
 
-$sqlSelectMovie = "SELECT * FROM movies LIMIT 24";
+if (!isset($_POST['submit'])) {
+    $data = [
+        'meta' => [
+            'code' => 404,
+            'status' => 'error',
+            'message' => 'Submit is not set.',
+        ],
+        'data' => [],
+    ];
+    echo json_encode($data);
+    exit;
+}
+
+$offset = $_POST['offset'];
+$limit = $_POST['limit'];
+
+$sqlSelectMovie = "SELECT * FROM movies ORDER BY release_date DESC LIMIT $offset, $limit";
 $querySelectMovie = $conn->query($sqlSelectMovie);
 
 header('Content-Type: application/json');

@@ -19,7 +19,7 @@ $(function () {
             value.poster_path
           }" class="film-poster-img lazyload" title="${value.title}" alt="${
             value.title
-          }"><a href="/watch.php?title=${
+          }"><a href="/watch?title=${
             value.title_slug
           }" class="film-poster-ahref flw-item-tip" title="${
             value.title
@@ -27,7 +27,7 @@ $(function () {
           </div>
 
           <div class="film-detail film-detail-fix">
-          <h3 class="film-name"><a href="/watch.php?title=${
+          <h3 class="film-name"><a href="/watch?title=${
             value.title_slug
           }" title="${value.title}">${value.title}</a></h3>
           <div class="fd-infor">

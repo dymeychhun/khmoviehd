@@ -1,7 +1,35 @@
 $(function () {
+  const genre = {
+    12: "Adventure",
+    14: "Fantasy",
+    16: "Animation",
+    18: "Drama",
+    27: "Horror",
+    28: "Action",
+    35: "Comedy",
+    36: "History",
+    37: "Western",
+    53: "Thriller",
+    80: "Crime",
+    99: "Documentary",
+    878: "Science Fiction",
+    9648: "Mystery",
+    10402: "Music",
+    10749: "Romance",
+    10751: "Family",
+    10752: "War",
+    10770: "TV Movie",
+  };
+
   let genreID = location.search.split("=")[1];
+
+  if (!genreID) {
+    location.replace(location.origin);
+    return;
+  }
+
   let start = 0;
-  let limit = 8;
+  let limit = 24;
 
   const getGenreMovie = (genreID, start, limit) => {
     let data = {
@@ -16,6 +44,7 @@ $(function () {
       data: data,
       success: function (response) {
         // console.log(response);
+
         $.each(response.data, function (_, value) {
           let html = `<div class="flw-item">
           <div class="film-poster">
@@ -24,7 +53,7 @@ $(function () {
             value.poster_path
           }" class="film-poster-img lazyload" title="${value.title}" alt="${
             value.title
-          }"><a href="/watch.php?title=${
+          }"><a href="/watch?title=${
             value.title_slug
           }" class="film-poster-ahref flw-item-tip" title="${
             value.title
@@ -32,7 +61,7 @@ $(function () {
           </div>
 
           <div class="film-detail film-detail-fix">
-          <h3 class="film-name"><a href="/watch.php?title=${
+          <h3 class="film-name"><a href="/watch?title=${
             value.title_slug
           }" title="${value.title}">${value.title}</a></h3>
           <div class="fd-infor">
@@ -57,6 +86,8 @@ $(function () {
   };
 
   getGenreMovie(genreID, start, limit);
+
+  $(".cat-heading").prepend(genre[genreID] + " Movies");
 
   $("#loadMore").on("click", function () {
     start += limit;

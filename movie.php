@@ -46,68 +46,14 @@
 
                     <!-- category filter -->
 
-                    <div class="pre-pagination mt-5 mb-5">
-                        <nav aria-label="Page navigation">
-                            <ul class="pagination pagination-lg justify-content-center">
-                                <li class="page-item active"><a class="page-link">1</a></li>
-                                <li class="page-item"><a title="Page 2" class="page-link" href="/movie?page=2">2</a>
-                                </li>
-                                <li class="page-item"><a title="Page 3" class="page-link" href="/movie?page=3">3</a>
-                                </li>
-                                <li class="page-item"><a title="Next" class="page-link" href="/movie?page=2">→</a>
-                                </li>
-                                <li class="page-item"><a title="Last" class="page-link" href="/movie?page=1303">»</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
                     <div class="block_area-content block_area-list film_list film_list-grid">
-                        <div class="film_list-wrap">
+                        <div class="film_list-wrap" id="displayAllMovie">
 
-                            <div class="flw-item">
-                                <div class="film-poster">
-
-                                    <div class="pick film-poster-quality">HD</div>
-
-                                    <img data-src="https://img.solarmovie.pe/xxrz/250x400/338/52/7b/527bdc2908423dffab686f4838487577/527bdc2908423dffab686f4838487577.jpg" class="film-poster-img lazyload" title="Don Juan from Zhashkiv" alt="Don Juan from Zhashkiv">
-                                    <a href="/movie.php/watch-don-juan-from-zhashkiv-free-108457" class="film-poster-ahref flw-item-tip" title="Don Juan from Zhashkiv"><i class="fa fa-play"></i></a>
-                                </div>
-                                <div class="film-detail film-detail-fix">
-
-                                    <h2 class="film-name"><a href="/movie/watch-don-juan-from-zhashkiv-free-108457" title="Don Juan from Zhashkiv">Don Juan from Zhashkiv</a>
-                                    </h2>
-
-                                    <div class="fd-infor">
-
-
-                                        <span class="fdi-item">2024</span>
-                                        <span class="dot"></span>
-                                        <span class="fdi-item fdi-duration">90m</span>
-
-
-                                        <span class="float-right fdi-type">Movie</span>
-                                    </div>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-
-                            <div class="clearfix"></div>
                         </div>
                     </div>
-                    <div class="pre-pagination mt-5 mb-5">
-                        <nav aria-label="Page navigation">
-                            <ul class="pagination pagination-lg justify-content-center">
-                                <li class="page-item active"><a class="page-link">1</a></li>
-                                <li class="page-item"><a title="Page 2" class="page-link" href="/movie?page=2">2</a>
-                                </li>
-                                <li class="page-item"><a title="Page 3" class="page-link" href="/movie?page=3">3</a>
-                                </li>
-                                <li class="page-item"><a title="Next" class="page-link" href="/movie?page=2">→</a>
-                                </li>
-                                <li class="page-item"><a title="Last" class="page-link" href="/movie?page=1303">»</a>
-                                </li>
-                            </ul>
-                        </nav>
+                    <div class="mw-buttons text-center my-5">
+                        <button type="button" class="btn btn-lg btn-radius btn-primary" id="loadMore">Load More</button>
+                        <!-- <i class="fas fa-arrow-circle-right ml-2"></i> -->
                     </div>
                 </section>
                 <!--End: Section film list-->
@@ -126,6 +72,7 @@
     var currPage = '';
 </script>
 <script type="text/javascript" src="js/app.min.js"></script>
+<script type="text/javascript" src="js/display-all-movie.js"></script>
 
 </body>
 

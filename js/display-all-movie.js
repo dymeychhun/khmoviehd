@@ -1,21 +1,8 @@
 $(function () {
-  let url = location.search.split("=")[1];
-
-  if (!url) {
-    location.replace(location.origin);
-    return;
-  }
-
-  let keyword = url.toLowerCase().replace(/\W+/g, "-");
-  let searchResultText = url.toLowerCase().replace(/\+/g, " ");
   let offset = 0;
   let limit = 24;
-
-  $(".cat-heading").append('"' + searchResultText + '"');
-
-  const getsearchMovie = (keyword, offset, limit) => {
+  const displayMovie = (offset, limit) => {
     let data = {
-      keyword: keyword,
       offset: offset,
       limit: limit,
       submit: true,
@@ -23,11 +10,10 @@ $(function () {
 
     $.ajax({
       type: "POST",
+      url: location.origin + "/display-all-movie.php",
       data: data,
-      url: location.origin + "/search-movie.php",
-      dataType: "json",
       success: function (response) {
-        // console.log(response);
+        console.log(response);
 
         $.each(response.data, function (_, value) {
           let html = `<div class="flw-item">
@@ -58,21 +44,24 @@ $(function () {
           <div class="clearfix"></div>
           </div>`;
 
-          $("#displaySearchMovie").append(html);
+          $("#displayAllMovie").append(html);
         });
-        $("#displaySearchMovie").append('<div class="clearfix"></div>');
+        $("#displayAllMovie").append('<div class="clearfix"></div>');
 
         if (response.data.length == 0) {
           $("#loadMore").text("No more found").prop("disabled", true);
         }
       },
+      error: function (error) {
+        console.log(error);
+      },
     });
   };
 
-  getsearchMovie(keyword, offset, limit);
+  displayMovie(offset, limit);
 
   $("#loadMore").on("click", function () {
     offset += limit;
-    getsearchMovie(keyword, offset, limit);
+    displayMovie(offset, limit);
   });
 });

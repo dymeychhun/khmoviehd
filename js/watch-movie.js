@@ -1,5 +1,11 @@
 $(function () {
   let title = location.search.split("=")[1];
+
+  if (!title) {
+    location.replace(location.origin);
+    return;
+  }
+
   let data = {
     title: title,
   };
@@ -24,12 +30,12 @@ $(function () {
       );
       $(".watch-movie").attr(
         "href",
-        "/watch.php?title=" + response.data.title_slug
+        "/watch?title=" + response.data.title_slug
       );
       $("#title")
         .append(response.data.title)
         .attr({
-          href: "/movie.php?title=" + response.data.title_slug,
+          href: "/movie?title=" + response.data.title_slug,
         });
       $(".poster").attr({
         src:
@@ -45,11 +51,7 @@ $(function () {
       let genreList = "";
       $.each(response.data.genre_id, function (_, value) {
         genreList +=
-          '<a href="/genre.php?genre=' +
-          value.id +
-          '">' +
-          value.name +
-          "</a>, ";
+          '<a href="/genre?genre=' + value.id + '">' + value.name + "</a>, ";
       });
       genreList = genreList.slice(0, -2);
       $("#genre").append(genreList);
@@ -57,7 +59,7 @@ $(function () {
         .text(response.data.english_name)
         .attr({
           title: response.data.english_name,
-          href: "/country.php?country=" + response.data.iso_3166_1,
+          href: "/country?country=" + response.data.iso_3166_1,
         });
 
       $("#iframe-trailer").attr(
@@ -65,7 +67,7 @@ $(function () {
         "https://www.youtube.com/embed/" + response.data.trailer
       );
 
-      jwplayer("mask-player").setup({
+      jwplayer("watch-iframe").setup({
         controls: true,
         sharing: true,
         displaytitle: true,
@@ -94,9 +96,9 @@ $(function () {
           {
             title: "You're Watching",
             description: response.data.title,
-            image:
-              "https://image.tmdb.org/t/p/original" +
-              response.data.backdrop_path,
+            image: "",
+            // "https://image.tmdb.org/t/p/original" +
+            // response.data.backdrop_path,
             sources: [
               {
                 file: response.data.video_path,

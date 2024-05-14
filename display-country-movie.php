@@ -7,7 +7,7 @@ if (isset($_POST['submit'])) {
     $offset = $_POST['offset'];
     $limit = $_POST['limit'];
 
-    $sqlSelectMovie = "SELECT * FROM movies WHERE country_iso_3166_1 = '$countryISO' LIMIT $offset, $limit";
+    $sqlSelectMovie = "SELECT * FROM movies WHERE country_iso_3166_1 = '$countryISO' ORDER BY release_date DESC LIMIT $offset, $limit";
     $querySelectMovie = $conn->query($sqlSelectMovie);
 
     header('Content-Type: application/json');
