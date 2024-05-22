@@ -19,6 +19,7 @@ while ($queryResult = $querySelectMovie->fetch_assoc()) {
     $genre = array_merge($genre, $genereArray);
     $country[] = $queryResult['country_iso_3166_1'];
 }
+
 $genre = array_unique($genre);
 $country = array_unique($country);
 

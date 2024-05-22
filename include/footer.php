@@ -18,7 +18,7 @@
                 hosted on 3rd party services.</span>
         </div>
         <div class="footer-logo-block">
-            <a href="/" class="footer-logo"><img src="images/ddb2bac796109ce3c61b955f4854ef9d.png" alt="Logo footer"></a>
+            <a href="/" class="footer-logo"><img src="images/KhMovieHD_Logo.png" alt="Logo footer"></a>
             <p class="copyright">© KhMovieHD</p>
         </div>
         <div class="clearfix"></div>

@@ -10,9 +10,8 @@
         <div id="header">
             <div class="container">
                 <div id="mobile_menu"><i class="fa fa-bars"></i></div>
-                <a href="/" id="logo"><img src="images/ddb2bac796109ce3c61b955f4854ef9d.png" alt="Logo">
+                <?php require_once 'include/menu-logo.php'; ?>
 
-                </a>
                 <!--Begin: Menu-->
                 <?php require_once 'include/header-menu.php'; ?>
                 <!--End: Menu-->
@@ -51,7 +50,7 @@
                         </nav>
                     </div>
 
-                    <div class="alert mb-3" style="background: #ffaa00; color: #111; font-size: 16px; font-weight: 600;">If you get any
+                    <div class="alert mb-3" style="background: #08763d; color: #111; font-size: 16px; font-weight: 600;">If you get any
                         error message when trying to stream, please Refresh the page.</div>
 
                     <div class="watching_player">

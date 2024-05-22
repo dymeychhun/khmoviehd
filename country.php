@@ -7,9 +7,8 @@
         <div id="header">
             <div class="container">
                 <div id="mobile_menu"><i class="fa fa-bars"></i></div>
-                <a href="/" id="logo"><img src="images/ddb2bac796109ce3c61b955f4854ef9d.png" alt="Logo">
+                <?php require_once 'include/menu-logo.php'; ?>
 
-                </a>
                 <!--Begin: Menu-->
                 <?php require_once 'include/header-menu.php'; ?>
                 <!--End: Menu-->
@@ -84,7 +83,7 @@
 <?php require_once 'include/script.php'; ?>
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script>
-    var currPage = '';
+var currPage = '';
 </script>
 <script type="text/javascript" src="js/app.min.js"></script>
 <script type="text/javascript" src="js/display-country-movie.js"></script>

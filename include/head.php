@@ -17,9 +17,10 @@
     <link rel="dns-prefetch" href="//connect.facebook.net">
     <link rel="dns-prefetch" href="//graph.facebook.com">
     <meta name="description" content="Watch The Lastest Movies Online in HD on KhMovieHD Official website">
-    <meta name="keywords" content="KhMovieHD, khmoviehd, KhMoviesHD, watch movies online, watch free movies, free movies streaming">
+    <meta name="keywords"
+        content="KhMovieHD, khmoviehd, KhMoviesHD, watch movies online, watch free movies, free movies streaming">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <link rel="shortcut icon" href="images/1ed66c3fd5d717d949289994f35d94c3.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://khmoviehd.top">
     <meta property="og:title" content="KhMovieHD - Watch Movies online">

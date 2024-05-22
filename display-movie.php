@@ -2,7 +2,7 @@
 require_once 'config/db_config.php';
 require_once 'config/db_connection.php';
 
-$sqlSelectMovie = "SELECT * FROM movies LIMIT 24";
+$sqlSelectMovie = "SELECT * FROM `movies` WHERE vote_average >= 6 ORDER BY vote_average DESC LIMIT 24";
 $querySelectMovie = $conn->query($sqlSelectMovie);
 
 header('Content-Type: application/json');

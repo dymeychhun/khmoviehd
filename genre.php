@@ -7,9 +7,8 @@
         <div id="header">
             <div class="container">
                 <div id="mobile_menu"><i class="fa fa-bars"></i></div>
-                <a href="/" id="logo"><img src="images/ddb2bac796109ce3c61b955f4854ef9d.png" alt="Logo">
+                <?php require_once 'include/menu-logo.php'; ?>
 
-                </a>
                 <!--Begin: Menu-->
                 <?php require_once 'include/header-menu.php'; ?>
                 <!--End: Menu-->
