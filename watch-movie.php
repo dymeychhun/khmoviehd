@@ -50,7 +50,8 @@
                         </nav>
                     </div>
 
-                    <div class="alert mb-3" style="background: #08763d; color: #111; font-size: 16px; font-weight: 600;">If you get any
+                    <div class="alert mb-3"
+                        style="background: #00acc1; color: #111; font-size: 16px; font-weight: 600;">If you get any
                         error message when trying to stream, please Refresh the page.</div>
 
                     <div class="watching_player">
@@ -72,7 +73,8 @@
                                 class="btn btn-sm btn-radius btn-secondary mr-2"><i class="fa fa-plus mr-2"></i>Add to
                                 favorite
                             </a> -->
-                            <a href="javascript:void(0)" id="turn-off-light" class="btn btn-sm btn-radius btn-secondary mr-2"><i class="fa fa-lightbulb mr-2"></i>
+                            <a href="javascript:void(0)" id="turn-off-light"
+                                class="btn btn-sm btn-radius btn-secondary mr-2"><i class="fa fa-lightbulb mr-2"></i>
                             </a>
                             <!-- <a id="pc-comment" href="javascript:void(0)"
                                 class="goto-comments btn btn-sm btn-radius btn-secondary mr-2"><i
@@ -119,10 +121,14 @@
                                 </h2>
                                 <div class="dp-i-stats">
                                     <span class="item mr-1">
-                                        <button data-toggle="modal" data-target="#modaltrailer" title="Trailer" class="btn btn-sm btn-trailer"><i class="fas fa-video mr-2"></i>Trailer</button>
+                                        <button data-toggle="modal" data-target="#modaltrailer" title="Trailer"
+                                            class="btn btn-sm btn-trailer"><i
+                                                class="fas fa-video mr-2"></i>Trailer</button>
                                     </span>
-                                    <span class="item mr-1"><button class="btn btn-sm btn-quality"><strong>HD</strong></button></span>
-                                    <span class="item mr-2"><button class="btn btn-sm btn-radius btn-warning btn-imdb" id="vote-average">IMDB:
+                                    <span class="item mr-1"><button
+                                            class="btn btn-sm btn-quality"><strong>HD</strong></button></span>
+                                    <span class="item mr-2"><button class="btn btn-sm btn-radius btn-warning btn-imdb"
+                                            id="vote-average">IMDB:
                                         </button></span>
                                 </div>
                                 <div class="description">
@@ -215,7 +221,9 @@
                         <div class="clearfix"></div>
                     </div>
                     <div class="comments-content">
-                        <div class="fb-comments" data-href="https://solarmovie.pe/watch-movie/watch-just-animals-free-108463.10428505" data-width="100%" data-numposts="10"></div>
+                        <div class="fb-comments"
+                            data-href="https://solarmovie.pe/watch-movie/watch-just-animals-free-108463.10428505"
+                            data-width="100%" data-numposts="10"></div>
                     </div>
                 </section>
             </div>
@@ -227,7 +235,8 @@
 
 </div>
 <!--Begin: Modal-->
-<div class="modal fade premodal premodal-trailer" id="modaltrailer" tabindex="-1" role="dialog" aria-labelledby="modaltrailertitle" aria-hidden="true">
+<div class="modal fade premodal premodal-trailer" id="modaltrailer" tabindex="-1" role="dialog"
+    aria-labelledby="modaltrailertitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-body">
@@ -235,7 +244,8 @@
                     <span aria-hidden="true">×</span>
                 </button>
                 <div class="iframe16x9">
-                    <iframe width="560" height="315" id="iframe-trailer" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+                    <iframe width="560" height="315" id="iframe-trailer" frameborder="0"
+                        allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
                 </div>
             </div>
         </div>
@@ -269,7 +279,7 @@
 </div>
 <?php require_once 'include/script.php'; ?>
 <script>
-    var currPage = 'watch';
+var currPage = 'watch';
 </script>
 <script type="text/javascript" src="js/app.min.js"></script>
 <script src="https://content.jwplatform.com/libraries/KB5zFt7A.js"></script>
