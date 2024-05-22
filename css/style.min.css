@@ -21,16 +21,16 @@ a {
   -moz-outline: none;
 }
 a:hover {
-  color: #0bbf64;
+  color: #00acc1;
 }
 .btn-radius {
   border-radius: 30px;
 }
 .btn-focus,
 .btn-primary {
-  background: #0bbf64 !important;
+  background: #00acc1 !important;
   color: #111 !important;
-  border-color: #0bbf64 !important;
+  border-color: #00acc1 !important;
 }
 .btn-focus:hover,
 .btn-primary:hover {
@@ -111,7 +111,7 @@ a:hover {
   min-height: 100%;
 }
 .highlight-text {
-  color: #0bbf64;
+  color: #00acc1;
 }
 #wrapper {
   width: 100%;
@@ -164,7 +164,7 @@ a:hover {
   display: none;
 }
 #mobile_menu.active i {
-  color: #0bbf64;
+  color: #00acc1;
 }
 #mobile_menu i {
   margin: 0;
@@ -201,13 +201,13 @@ a:hover {
   text-transform: uppercase;
 }
 #header_menu ul.header_menu-list .nav-item:hover > a {
-  color: #0bbf64;
+  color: #00acc1;
 }
 #header_menu ul.header_menu-list .nav-item.active > a:before {
   content: "";
   width: 100%;
   height: 3px;
-  background: #0bbf64;
+  background: #00acc1;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -248,7 +248,7 @@ a:hover {
   text-overflow: ellipsis;
 }
 #header_menu .header_menu-sub ul.sub-menu li:hover a {
-  background: #0bbf64;
+  background: #00acc1;
   color: #111 !important;
 }
 #header_right {
@@ -289,13 +289,13 @@ a:hover {
 }
 #header .btn-on-header:hover {
   background: 0 0;
-  color: #0bbf64 !important;
+  color: #00acc1 !important;
 }
 #header #search-toggle .btn-on-header {
   font-size: 20px;
 }
 #header #search-toggle.active .btn-on-header {
-  background: #0bbf64;
+  background: #00acc1;
   color: #fff;
 }
 .header_right-user.logged .dropdown-menu {
@@ -408,7 +408,7 @@ a:hover {
 }
 .search-content .search-result-pop .nav-bottom {
   padding: 15px;
-  background: #0bbf64 !important;
+  background: #00acc1 !important;
   font-size: 16px;
   color: #111;
   text-align: center;
@@ -626,7 +626,7 @@ a:hover {
   margin: 2px 0;
 }
 .pre-tabs {
-  border-bottom: 2px solid #0bbf64;
+  border-bottom: 2px solid #00acc1;
 }
 .pre-tabs .nav-item {
   font-size: 16px;
@@ -646,7 +646,7 @@ a:hover {
   border-bottom-color: #222;
 }
 .pre-tabs .nav-item .nav-link.active {
-  background: #0bbf64;
+  background: #00acc1;
   color: #111;
 }
 .film-poster-ahref i,
@@ -697,7 +697,7 @@ a:hover {
   margin-top: -30px;
   margin-left: -30px;
   border-radius: 50%;
-  background: #0bbf64;
+  background: #00acc1;
   opacity: 0;
   z-index: 2;
 }
@@ -813,7 +813,7 @@ a:hover {
   color: #fff;
 }
 .pre-pagination .pagination .page-item.active .page-link {
-  background: #0bbf64;
+  background: #00acc1;
   color: #111;
   cursor: default;
 }
@@ -869,7 +869,7 @@ a:hover {
 }
 .premodal .modal-content .close:hover {
   opacity: 1;
-  background: #0bbf64;
+  background: #00acc1;
   color: #111;
 }
 .premodal .modal-content .modal-body {
@@ -911,7 +911,7 @@ a:hover {
   line-height: 1.5rem;
 }
 .link-highlight {
-  color: #0bbf64 !important;
+  color: #00acc1 !important;
   cursor: pointer;
 }
 .modal-logo {
@@ -993,7 +993,7 @@ a:hover {
   cursor: pointer;
 }
 #sidebar_menu .sidebar_menu-list > .nav-item > .toggle-submenu:hover {
-  color: #0bbf64;
+  color: #00acc1;
 }
 #sidebar_menu .sidebar_menu-list > .nav-item .nav {
   margin-bottom: 20px;
@@ -1294,7 +1294,7 @@ a:hover {
   z-index: 2;
 }
 .detail_page-watch .dp-w-cover .dp-w-c-play:hover {
-  background: #0bbf64;
+  background: #00acc1;
   color: #000;
 }
 .detail_page-watch .dp-w-cover .dp-w-c-play i {
@@ -1528,7 +1528,7 @@ a:hover {
   background: #333;
 }
 .detail_page-servers .dp-s-line .nav .nav-item .nav-link.active {
-  background: #0bbf64;
+  background: #00acc1;
   color: #111;
 }
 .film_tools {
@@ -1608,7 +1608,7 @@ a:hover {
   border-radius: 2px 2px 0 0;
 }
 .block_area_manager .block_area-header-tabs .pre-tabs .nav-link.active {
-  background: #0bbf64;
+  background: #00acc1;
   color: #111;
 }
 .block_area_manager .block_area-header-tabs .pre-tabs .nav-item {
@@ -1679,7 +1679,7 @@ a:hover {
   display: block;
 }
 .seasons-list .sl-content .slc-ul li.active a {
-  color: #0bbf64;
+  color: #00acc1;
 }
 .seasons-list .sl-content .slc-seasons .slcs-ul li {
   display: block;
@@ -1697,7 +1697,7 @@ a:hover {
   border-bottom-color: rgba(255, 255, 255, 0);
 }
 .seasons-list .sl-content .slc-seasons .slcs-ul li.active a {
-  background: #0bbf64;
+  background: #00acc1;
   color: #111;
 }
 .seasons-list .sl-content .slc-seasons .slcs-ul li.active .badge {
@@ -1789,7 +1789,7 @@ a:hover {
   color: #fff;
 }
 .seasons-list .sl-content .slc-eps .slce-list .nav-link.active {
-  background: #0bbf64;
+  background: #00acc1;
   color: #111;
 }
 .seasons-list .sl-content .slc-eps .slce-list .nav-link.active i {
@@ -1824,7 +1824,7 @@ a:hover {
   color: #888;
 }
 .text-home a {
-  color: #0bbf64;
+  color: #00acc1;
 }
 .text-home .btn-expand {
   display: none;
@@ -1984,7 +1984,7 @@ a:hover {
   background: #eee;
 }
 .dropdown-menu-new .dropdown-item.active {
-  background: #0bbf64;
+  background: #00acc1;
   color: #111;
 }
 .dropdown-menu-new {
@@ -2101,7 +2101,7 @@ a:hover {
   color: #fff !important;
 }
 .watching_player-control .btn-download {
-  color: #0bbf64 !important;
+  color: #00acc1 !important;
 }
 @media screen and (min-width: 1681px) {
   .container {
@@ -2558,7 +2558,7 @@ a:hover {
     line-height: normal;
     border: none;
     background: #222 !important;
-    color: #0bbf64 !important;
+    color: #00acc1 !important;
   }
   .header_right-user.logged > .dropdown > .btn-primary i {
     font-size: 20px;
