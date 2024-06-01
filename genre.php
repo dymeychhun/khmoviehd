@@ -73,6 +73,9 @@
                 </section>
                 <!--End: Section film list-->
             </div>
+            <!-- back to the top -->
+            <div class="back-to-the-top"><i class="fas fa-angle-up"></i>
+            </div>
         </div>
         <!--End: Main-->
 
@@ -84,7 +87,7 @@
 <?php require_once 'include/script.php'; ?>
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script>
-var currPage = '';
+    var currPage = '';
 </script>
 <script type="text/javascript" src="js/app.min.js"></script>
 <script type="text/javascript" src="js/display-genre-movie.js"></script>

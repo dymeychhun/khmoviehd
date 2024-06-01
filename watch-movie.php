@@ -1,6 +1,7 @@
 <?php require_once 'include/head.php'; ?>
 <div id="fb-root"></div>
-<script async="" defer="" crossorigin="anonymous" src="js/sdk.js#xfbml=1&amp;version=v4.0"></script>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v20.0"
+    nonce="GSLxGmwP"></script>
 
 <div id="app">
     <div id="sidebar_menu_bg"></div>
@@ -76,14 +77,17 @@
                             <a href="javascript:void(0)" id="turn-off-light"
                                 class="btn btn-sm btn-radius btn-secondary mr-2"><i class="fa fa-lightbulb mr-2"></i>
                             </a>
-                            <!-- <a id="pc-comment" href="javascript:void(0)"
+                            <a id="pc-comment" href="javascript:void(0)"
                                 class="goto-comments btn btn-sm btn-radius btn-secondary mr-2"><i
                                     class="fa fa-comments mr-2"></i>Comments
-                            </a> -->
+                            </a>
                             <div class="clearfix"></div>
                         </div>
                     </div>
                 </div>
+            </div>
+            <!-- back to the top -->
+            <div class="back-to-the-top"><i class="fas fa-angle-up"></i>
             </div>
         </div>
         <!--Begin: Detail-->
@@ -91,10 +95,9 @@
             <div class="container">
                 <!--Begin: Watch-->
                 <div class="detail_page-watch" data-watch_id="">
-                    <!-- <div class="sharethis-inline-share-buttons"
-                                data-url="https://solarmovie.pe/watch-movie/watch-just-animals-free-108463.10428505"
-                                style="padding-top: 20px; padding-bottom: 20px; text-align: center;">
-                            </div> -->
+                    <!-- <div class="sharethis-inline-share-buttons" data-url=""
+                        style="padding-top: 20px; padding-bottom: 20px; text-align: center;">
+                    </div> -->
                     <!-- <div id="content-episodes">
                                 <div class="loading-relative">
                                     <div class="loading">
@@ -221,9 +224,8 @@
                         <div class="clearfix"></div>
                     </div>
                     <div class="comments-content">
-                        <div class="fb-comments"
-                            data-href="https://solarmovie.pe/watch-movie/watch-just-animals-free-108463.10428505"
-                            data-width="100%" data-numposts="10"></div>
+                        <div class="fb-comments" data-href="" data-width="100%" data-numposts="10">
+                        </div>
                     </div>
                 </section>
             </div>
@@ -285,8 +287,6 @@ var currPage = 'watch';
 <script src="https://content.jwplatform.com/libraries/KB5zFt7A.js"></script>
 <script src="js/watch-movie.js"></script>
 <script src="js/player.min.js"></script>
-
-
 
 </body>
 

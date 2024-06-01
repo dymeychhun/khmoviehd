@@ -31,8 +31,10 @@
                         <div class="search-content">
                             <form action="search" method="GET" id="searchForm">
                                 <div class="search-icon"><i class="fa fa-search"></i></div>
-                                <input type="text" class="form-control search-input" name="keyword" placeholder="Enter keywords..." autocomplete="off" id="keyword" required>
-                                <button type="submit" class="btn btn-primary btn-primary-submit"><i class="fas fa-arrow-right"></i></button>
+                                <input type="text" class="form-control search-input" name="keyword"
+                                    placeholder="Enter keywords..." autocomplete="off" id="keyword" required>
+                                <button type="submit" class="btn btn-primary btn-primary-submit"><i
+                                        class="fas fa-arrow-right"></i></button>
                             </form>
                             <div class="nav search-result-pop search-suggest"></div>
                         </div>
@@ -68,6 +70,9 @@
                     </div>
                 </section>
             </div>
+            <!-- back to the top -->
+            <div class="back-to-the-top"><i class="fas fa-angle-up"></i>
+            </div>
         </div>
 
         <!-- footer part -->
@@ -82,7 +87,7 @@
 <!--script-->
 <?php require_once 'include/script.php'; ?>
 <script>
-    var currPage = 'home';
+var currPage = 'home';
 </script>
 <script type="text/javascript" src="js/app.min.js"></script>
 <script type="text/javascript" src="js/display-movie.js"></script>

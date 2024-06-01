@@ -67,7 +67,8 @@
                                     <div class="dp-i-c-stick">
 
 
-                                        <a title="Watch now" class="btn btn-radius btn-focus watch-movie"><i class="fa fa-play mr-2"></i>Watch
+                                        <a title="Watch now" class="btn btn-radius btn-focus watch-movie"><i
+                                                class="fa fa-play mr-2"></i>Watch
                                             now</a>
 
 
@@ -78,10 +79,15 @@
                                     </h2>
                                     <div class="dp-i-stats">
                                         <span class="item mr-1">
-                                            <button data-toggle="modal" data-target="#modaltrailer" title="Trailer" class="btn btn-sm btn-trailer"><i class="fas fa-video mr-2"></i>Trailer</button>
+                                            <button data-toggle="modal" data-target="#modaltrailer" title="Trailer"
+                                                class="btn btn-sm btn-trailer"><i
+                                                    class="fas fa-video mr-2"></i>Trailer</button>
                                         </span>
-                                        <span class="item mr-1"><button class="btn btn-sm btn-quality"><strong>HD</strong></button></span>
-                                        <span class="item mr-2"><button class="btn btn-sm btn-radius btn-warning btn-imdb" id="vote-average">IMDB: </button>
+                                        <span class="item mr-1"><button
+                                                class="btn btn-sm btn-quality"><strong>HD</strong></button></span>
+                                        <span class="item mr-2"><button
+                                                class="btn btn-sm btn-radius btn-warning btn-imdb"
+                                                id="vote-average">IMDB: </button>
                                         </span>
                                     </div>
                                     <div class="description">
@@ -150,7 +156,8 @@
                             </div> -->
                     </div>
                     <!--End: Watch-->
-                    <div class="sharethis-inline-share-buttons" data-url="" style="margin-top: 20px; margin-bottom: 20px; text-align: center;"></div>
+                    <div class="sharethis-inline-share-buttons" data-url=""
+                        style="margin-top: 20px; margin-bottom: 20px; text-align: center;"></div>
                     <!-- <div class="sharethis-inline-share-buttons"></div> -->
                     <!-- <div id="content-episodes" style="margin-bottom: 30px;"></div> -->
 
@@ -178,13 +185,17 @@
                 </div>
             </div>
             <!--End: Related-->
+            <!-- back to the top -->
+            <div class="back-to-the-top"><i class="fas fa-angle-up"></i>
+            </div>
         </div>
         <!--End: Main-->
         <?php require_once 'include/footer.php'; ?>
 
     </div>
     <!--Begin: Modal-->
-    <div class="modal fade premodal premodal-trailer" id="modaltrailer" tabindex="-1" role="dialog" aria-labelledby="modaltrailertitle" aria-hidden="true">
+    <div class="modal fade premodal premodal-trailer" id="modaltrailer" tabindex="-1" role="dialog"
+        aria-labelledby="modaltrailertitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-body">
@@ -192,7 +203,8 @@
                         <span aria-hidden="true">×</span>
                     </button>
                     <div class="iframe16x9">
-                        <iframe width="560" height="315" id="iframe-trailer" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+                        <iframe width="560" height="315" id="iframe-trailer" frameborder="0"
+                            allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
                     </div>
                 </div>
             </div>
@@ -202,11 +214,13 @@
 </div>
 <?php require_once 'include/script.php'; ?>
 <script>
-    var currPage = 'detail';
+var currPage = 'detail';
 </script>
 <script type="text/javascript" src="js/app.min.js"></script>
 <script type="text/javascript" src="js/detail-movie.js"></script>
-<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=663f7413dc54790019b8dc40&product=inline-share-buttons&source=platform" async="async"></script>
+<script type="text/javascript"
+    src="https://platform-api.sharethis.com/js/sharethis.js#property=663f7413dc54790019b8dc40&product=inline-share-buttons&source=platform"
+    async="async"></script>
 </body>
 
 </html>

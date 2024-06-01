@@ -43,7 +43,27 @@ $(function () {
       url: location.origin + "/display-genre-movie.php",
       data: data,
       success: function (response) {
-        // console.log(response);
+        // og
+        $("title").text(
+          "Watch Free " + genre[genreID] + " Movies Online on KhMovieHD"
+        );
+        $("meta[name='description']").attr(
+          "content",
+          `Watch all ${genre[genreID]} movies online in HD quality for FREE on KhMovieHD, no registration required.`
+        );
+        $("meta[name='keywords']").attr(
+          "content",
+          `khmoviehd ${genre[genreID]}, best ${genre[genreID]} movies, top ${genre[genreID]} movies, best ${genre[genreID]} tv shows, top ${genre[genreID]} shows, latest ${genre[genreID]} movies, latest ${genre[genreID]} shows`
+        );
+        $("meta[property='og:url']").attr("content", location.href);
+        $("meta[property='og:title']").attr(
+          "content",
+          "Watch Free" + genre[genreID] + " Movies Online on KhMovieHD"
+        );
+        $("meta[property='og:description']").attr(
+          "content",
+          `Watch all ${genre[genreID]} movies online in HD quality for FREE on KhMovieHD, no registration required.`
+        );
 
         $.each(response.data, function (_, value) {
           let html = `<div class="flw-item">
@@ -90,7 +110,14 @@ $(function () {
   $(".cat-heading").prepend(genre[genreID] + " Movies");
 
   $("#loadMore").on("click", function () {
-    start += limit;
-    getGenreMovie(genreID, start, limit);
+    let spinner = $(this);
+    let html = `<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+  Loading...`;
+    spinner.html(html).prop("disabled", true);
+    setTimeout(function () {
+      start += limit;
+      getGenreMovie(genreID, start, limit);
+      spinner.text("Load more").prop("disabled", false);
+    }, 3000);
   });
 });

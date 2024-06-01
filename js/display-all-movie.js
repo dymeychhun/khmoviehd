@@ -61,7 +61,14 @@ $(function () {
   displayMovie(offset, limit);
 
   $("#loadMore").on("click", function () {
-    offset += limit;
-    displayMovie(offset, limit);
+    let spinner = $(this);
+    let html = `<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+  Loading...`;
+    spinner.html(html).prop("disabled", true);
+    setTimeout(function () {
+      offset += limit;
+      displayMovie(offset, limit);
+      spinner.text("Load more").prop("disabled", false);
+    }, 3000);
   });
 });

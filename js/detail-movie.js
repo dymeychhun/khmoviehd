@@ -19,7 +19,25 @@ $(function () {
         location.replace(location.origin);
         return;
       }
-      // console.log(response);
+
+      // og
+      $("title").text("Watch " + response.data.title + " - Free & HD Quality");
+      $("meta[name='description']").attr("content", response.data.overview);
+      $("meta[name='keywords']").attr(
+        "content",
+        `${response.data.title} khmoviehd, watch ${response.data.title} free, download ${response.data.title} free, full ${response.data.title} online, ${response.data.title} full HD`
+      );
+      $("meta[property='og:url']").attr("content", location.href);
+      $("meta[property='og:title']").attr("content", response.data.title);
+      $("meta[property='og:description']").attr(
+        "content",
+        response.data.overview
+      );
+      $("meta[property='og:image']").attr(
+        "content",
+        "https://media.themoviedb.org/t/p/w220_and_h330_face" +
+          response.data.poster_path
+      );
 
       $(".cover_follow").css(
         "background-image",
@@ -59,6 +77,9 @@ $(function () {
         "data-src",
         "https://www.youtube.com/embed/" + response.data.trailer
       );
+
+      // share this
+      $(".sharethis-inline-share-buttons").attr("data-url", location.href);
     },
   });
 });

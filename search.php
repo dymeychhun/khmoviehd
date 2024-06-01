@@ -73,6 +73,9 @@
                 </section>
                 <!--End: Section film list-->
             </div>
+            <!-- back to the top -->
+            <div class="back-to-the-top"><i class="fas fa-angle-up"></i>
+            </div>
         </div>
         <!--End: Main-->
 

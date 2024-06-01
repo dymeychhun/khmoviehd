@@ -268,7 +268,27 @@ $(function () {
       url: location.origin + "/display-country-movie.php",
       data: data,
       success: function (response) {
-        console.log(response);
+        // og
+        $("title").text(
+          "Watch Free " + countries[countryISO] + " Movies Online on KhMovieHD"
+        );
+        $("meta[name='description']").attr(
+          "content",
+          `Watch all ${countries[countryISO]} movies online in HD quality for FREE on KhMovieHD, no registration required.`
+        );
+        $("meta[name='keywords']").attr(
+          "content",
+          `khmoviehd ${countries[countryISO]}, best ${countries[countryISO]} movies, top ${countries[countryISO]} movies, best ${countries[countryISO]} tv shows, top ${countries[countryISO]} shows, latest ${countries[countryISO]} movies, latest ${countries[countryISO]} shows`
+        );
+        $("meta[property='og:url']").attr("content", location.href);
+        $("meta[property='og:title']").attr(
+          "content",
+          "Watch Free" + countries[countryISO] + " Movies Online on KhMovieHD"
+        );
+        $("meta[property='og:description']").attr(
+          "content",
+          `Watch all ${countries[countryISO]} movies online in HD quality for FREE on KhMovieHD, no registration required.`
+        );
 
         $.each(response.data, function (_, value) {
           let html = `<div class="flw-item">
@@ -315,7 +335,14 @@ $(function () {
   $(".cat-heading").append(countries[countryISO] + " Movies");
 
   $("#loadMore").on("click", function () {
-    offset += limit;
-    getCountryMovie(countryISO, offset, limit);
+    let spinner = $(this);
+    let html = `<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+  Loading...`;
+    spinner.html(html).prop("disabled", true);
+    setTimeout(function () {
+      offset += limit;
+      getCountryMovie(countryISO, offset, limit);
+      spinner.text("Load more").prop("disabled", false);
+    }, 3000);
   });
 });
