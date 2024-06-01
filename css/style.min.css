@@ -30,6 +30,9 @@ body {
   z-index: 999;
   /* display: none; */
 }
+.back-to-the-top:hover {
+  background: #0090a3;
+}
 a {
   color: #fff;
   text-decoration: none !important;

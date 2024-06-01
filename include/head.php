@@ -26,7 +26,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://khmoviehd.top">
     <meta property="og:title" content="KhMovieHD - Watch Movies online">
-    <meta property="og:image" content="images/b971128e64f76d20e06d57c59c6a6589.png">
+    <meta property="og:image" content="images/banner.png">
     <meta property="og:image:width" content="650">
     <meta property="og:image:height" content="350">
     <meta property="og:description" content="Watch The Movies Online in HD on KhMovieHD Official website">

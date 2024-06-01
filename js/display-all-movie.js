@@ -13,7 +13,30 @@ $(function () {
       url: location.origin + "/display-all-movie.php",
       data: data,
       success: function (response) {
-        console.log(response);
+        // console.log(response);
+
+        //OG
+
+        $("title").text("KhMovieHD - Watch Free HD Movies Online");
+        $("meta[name='description']").attr(
+          "content",
+          "Watch Movies online for free with No Account required and No Buffering on KhMovieHD"
+        );
+        $("meta[name='keywords']").attr(
+          "content",
+          "khmoviehd, khmovieshd, watch movies online, free movies streaming, free hd movies, hd online, khmoviehd watch, watch series online"
+        );
+        $("meta[property='og:url']").attr("content", location.href);
+        $("meta[property='og:title']").attr(
+          "content",
+          "KhMovieHD - Watch Free HD Movies Online"
+        );
+        $("meta[property='og:description']").attr(
+          "content",
+          "Watch Movies online for free with No Account required and No Buffering on KhMovieHD"
+        );
+
+        // End OG
 
         $.each(response.data, function (_, value) {
           let html = `<div class="flw-item">

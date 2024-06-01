@@ -1,9 +1,14 @@
 $(function () {
+  let title = location.search.split("=")[1];
+
   const getMayLikeMovie = () => {
+    let data = {
+      title_slug: title,
+    };
     $.ajax({
-      type: "GET",
+      type: "POST",
+      data: data,
       url: location.origin + "/may-like-movie.php",
-      dataType: "json",
       success: function (response) {
         // console.log(response);
 

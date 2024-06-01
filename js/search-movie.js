@@ -29,6 +29,29 @@ $(function () {
       success: function (response) {
         // console.log(response);
 
+        //OG
+
+        $("title").text("KhMovieHD - Search result for " + searchResultText);
+        $("meta[name='description']").attr(
+          "content",
+          `Watch ${searchResultText} movies and shows for free on KhMovieHD, download ${searchResultText} movies and shows in HD with KhMovieHD`
+        );
+        $("meta[name='keywords']").attr(
+          "content",
+          `KhMovieHD ${searchResultText}, ${searchResultText} full hd, ${searchResultText} download, watch ${searchResultText} free, free ${searchResultText} stream`
+        );
+        $("meta[property='og:url']").attr("content", location.href);
+        $("meta[property='og:title']").attr(
+          "content",
+          "KhMovieHD - Search result for " + searchResultText
+        );
+        $("meta[property='og:description']").attr(
+          "content",
+          `Watch ${searchResultText} movies and shows for free on KhMovieHD, download ${searchResultText} movies and shows in HD with KhMovieHD`
+        );
+
+        // End OG
+
         $.each(response.data, function (_, value) {
           let html = `<div class="flw-item">
           <div class="film-poster">
@@ -72,7 +95,14 @@ $(function () {
   getsearchMovie(keyword, offset, limit);
 
   $("#loadMore").on("click", function () {
-    offset += limit;
-    getsearchMovie(keyword, offset, limit);
+    let spinner = $(this);
+    let html = `<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+  Loading...`;
+    spinner.html(html).prop("disabled", true);
+    setTimeout(function () {
+      offset += limit;
+      getsearchMovie(keyword, offset, limit);
+      spinner.text("Load more").prop("disabled", false);
+    }, 3000);
   });
 });
